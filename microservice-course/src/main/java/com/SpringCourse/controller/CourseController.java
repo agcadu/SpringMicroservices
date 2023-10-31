@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/course")
+@RequestMapping("/api/courses")
 public class CourseController {
 
     @Autowired
@@ -16,7 +16,7 @@ public class CourseController {
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public void saveStudent(@RequestBody Course course){
+    public void saveCourse(@RequestBody Course course){
         courseService.save(course);
     }
 

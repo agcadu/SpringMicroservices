@@ -6,19 +6,18 @@ spring:
     name: microservice-student
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/student_db
-    username: root
-    password: root
+    url: ${MYSQLDB_URL}
+    username: ${MYSQLDB_USER}
+    password: ${MYSQLDB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: create
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
-
 eureka:
   instance:
-    hostname: localhost
+    hostname: microservice-eureka
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://microservice-eureka:8761/eureka/

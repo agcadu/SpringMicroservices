@@ -1,0 +1,7 @@
+FROM openjdk:17-jdk-alpine
+
+COPY target/microservice-config-server-0.0.1-SNAPSHOT.jar microservice-config-server.jar
+
+WORKDIR /
+
+ENTRYPOINT ["java", "-jar", "/microservice-config-server.jar"]

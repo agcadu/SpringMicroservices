@@ -1,0 +1,7 @@
+FROM openjdk:17-jdk-alpine
+
+COPY target/microservice-course-0.0.1-SNAPSHOT.jar microservice-course.jar
+
+WORKDIR /
+
+ENTRYPOINT ["java", "-jar", "/microservice-course.jar"]

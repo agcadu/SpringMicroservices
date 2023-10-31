@@ -1,0 +1,100 @@
+version: '3'
+
+services:
+  microservice-config-server:
+    container_name: microservice-config-server
+    image: microservice-config-server
+    build:
+      context: ./microservice-config-server
+    ports:
+      - "8888:8888"
+    networks:
+      - my_network
+
+  microservice-eureka:
+    container_name: microservice-eureka
+    image: microservice-eureka
+    build:
+      context: ./microservice-eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - my_network
+    depends_on:
+      - microservice-config-server
+    restart: "no"
+
+  microservice-gateway:
+    container_name: microservice-gateway
+    image: microservice-gateway
+    build:
+      context: ./microservice-gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - my_network
+    depends_on:
+      - microservice-eureka
+    restart: "no"
+
+  postgres_db:
+    container_name: postgres_db
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=course_db
+    networks:
+      - my_network
+
+  mysql_db:
+    container_name: mysql_db
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=student_db
+    networks:
+      - my_network
+
+  microservice-course:
+    container_name: microservice-course
+    image: microservice-course
+    build:
+      context: ./microservice-course
+    ports:
+      - "9090:9090"
+    environment:
+      - DATABASE_URL=jdbc:postgresql://postgres_db:5432/course_db
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    networks:
+      - my_network
+    depends_on:
+      - postgres_db
+    restart: "no"
+
+  microservice-student:
+    container_name: microservice-student
+    image: microservice-student
+    build:
+      context: ./microservice-student
+    ports:
+      - "8090:8090"
+    environment:
+      - MYSQLDB_URL=jdbc:mysql://mysql_db:3306/student_db
+      - MYSQLDB_USER=root
+      - MYSQLDB_PASSWORD=root
+    networks:
+      - my_network
+    depends_on:
+      - mysql_db
+    restart: "no"
+
+networks:
+  my_network:
+    driver: bridge
+
