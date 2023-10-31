@@ -1,0 +1,23 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: microservice-student
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MYSQLDB_URL}
+    username: ${MYSQLDB_USER}
+    password: ${MYSQLDB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  instance:
+    hostname: microservice-eureka
+  client:
+    service-url:
+      defaultZone: http://microservice-eureka:8761/eureka/

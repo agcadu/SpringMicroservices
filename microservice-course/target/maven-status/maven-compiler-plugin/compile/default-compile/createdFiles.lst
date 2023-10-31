@@ -1,0 +1,12 @@
+com\SpringCourse\http\response\StudentByCourseResponse.class
+com\SpringCourse\controller\dto\StudentDTO.class
+com\SpringCourse\client\IStudentClient.class
+com\SpringCourse\controller\CourseController.class
+com\SpringCourse\persistence\ICourseRepository.class
+com\SpringCourse\entities\Course$CourseBuilder.class
+com\SpringCourse\http\response\StudentByCourseResponse$StudentByCourseResponseBuilder.class
+com\SpringCourse\service\ICourseService.class
+com\SpringCourse\MicroserviceCourseApplication.class
+com\SpringCourse\entities\Course.class
+com\SpringCourse\controller\dto\StudentDTO$StudentDTOBuilder.class
+com\SpringCourse\service\CourseServiceImpl.class

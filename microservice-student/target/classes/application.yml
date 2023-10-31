@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: microservice-student
+    config:
+        import: optional:configserver:http://microservice-config-server:8888
+
+

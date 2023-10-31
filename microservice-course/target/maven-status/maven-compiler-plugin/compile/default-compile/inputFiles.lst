@@ -1,0 +1,9 @@
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\MicroserviceCourseApplication.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\controller\dto\StudentDTO.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\http\response\StudentByCourseResponse.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\entities\Course.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\persistence\ICourseRepository.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\service\ICourseService.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\controller\CourseController.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\client\IStudentClient.java
+D:\cursos\SpringMicroservices\microservice-course\src\main\java\com\SpringCourse\service\CourseServiceImpl.java

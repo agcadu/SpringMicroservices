@@ -1,0 +1,7 @@
+com\SpringStudent\entities\Student.class
+com\SpringStudent\persistence\StudentRepository.class
+com\SpringStudent\controller\StudentController.class
+com\SpringStudent\entities\Student$StudentBuilder.class
+com\SpringStudent\service\StudentServiceImpl.class
+com\SpringStudent\service\IStudentService.class
+com\SpringStudent\MicroserviceStudentApplication.class

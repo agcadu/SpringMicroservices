@@ -1,0 +1,26 @@
+eureka:
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://microservice-eureka:8761/eureka/
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: microservice-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: students
+          uri: http://microservice-student:8090
+          predicates:
+            - Path=/api/students/**
+        - id: courses
+          uri: http://microservice-course:9090
+          predicates:
+            - Path=/api/courses/**
