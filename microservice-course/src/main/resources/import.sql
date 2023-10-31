@@ -1,5 +1,5 @@
-INSERT INTO courses (name, teacher) VALUES ('Matemáticas', 'Profesor A');
-INSERT INTO courses (name, teacher) VALUES ('Historia', 'Profesor B');
-INSERT INTO courses (name, teacher) VALUES ('Ciencias', 'Profesor C');
-INSERT INTO courses (name, teacher) VALUES ('Literatura', 'Profesor D');
-INSERT INTO courses (name, teacher) VALUES ('Educación Física', 'Profesor E');
+INSERT INTO courses (name, teacher) VALUES ('Lengua', 'Pepe');
+INSERT INTO courses (name, teacher) VALUES ('Historia', 'Severino');
+INSERT INTO courses (name, teacher) VALUES ('Fisica', 'Juan');
+INSERT INTO courses (name, teacher) VALUES ('Ingles', 'Maria');
+INSERT INTO courses (name, teacher) VALUES ('Quimica', 'Carmen');
